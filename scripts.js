@@ -43,6 +43,5 @@ console.log("Original studentName:", studentName);
 studentName = "Amira Nna";
 console.log("Updated studentName:", studentName);
 
-
 // Note: const variables cannot be reassigned
 
