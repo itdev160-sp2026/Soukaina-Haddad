@@ -1,51 +1,47 @@
-// Function to check age and display result
-function checkAge() {
-  // Get the input value
-  const ageInput = document.getElementById("ageInput");
-  const resultDiv = document.getElementById("result");
-  const inputValue = ageInput.value.trim();
 
-  console.log(`User input: "${inputValue}"`);
 
-  // Clear previous styling
-  resultDiv.className = "";
+// Part 1: Hello World in console
+console.log("Hello, World!");
 
-  // Check if input is empty
-  if (inputValue === "") {
-    resultDiv.textContent = "Please enter your age";
-    resultDiv.className = "invalid";
-    console.log("Result: Empty input");
-    return;
-  }
+// Part 2: Display Hello World on the webpage
+document.getElementById("output").innerHTML = "<h2>Hello, World!</h2>";
 
-  // Convert to number
-  const age = Number(inputValue);
+// Part 3: Variable Declarations
+// String variable
+let studentName = "Soukaina Haddad";
 
-  // Check if input is a valid number
-  if (isNaN(age)) {
-    resultDiv.textContent = "Invalid age - please enter a number";
-    resultDiv.className = "invalid";
-    console.log("Result: Not a number");
-    return;
-  }
+// Number variable
+const age = 27;
 
-  // Check for realistic age range
-  if (age < 0 || age > 150) {
-    resultDiv.textContent =
-      "Invalid age - please enter a realistic age (0-150)";
-    resultDiv.className = "invalid";
-    console.log("Result: Age out of range");
-    return;
-  }
+// Boolean variable
+let isStudent = true;
 
-  // Determine if adult or minor
-  if (age >= 18) {
-    resultDiv.textContent = `You are ${age} years old - You are an adult`;
-    resultDiv.className = "adult";
-    console.log(`Result: Adult (age: ${age})`);
-  } else {
-    resultDiv.textContent = `You are ${age} years old - You are a minor`;
-    resultDiv.className = "minor";
-    console.log(`Result: Minor (age: ${age})`);
-  }
-}
+// Null variable
+let emptyValue = null;
+
+// Undefined variable
+let notAssigned;
+
+// Part 4: Console logging variables and their types
+console.log("=== Variable Values ===");
+console.log("Student Name:", studentName);
+console.log("Age:", age);
+console.log("Is Student:", isStudent);
+console.log("Empty Value:", emptyValue);
+console.log("Not Assigned:", notAssigned);
+
+console.log("=== Variable Types ===");
+console.log("typeof studentName:", typeof studentName);
+console.log("typeof age:", typeof age);
+console.log("typeof isStudent:", typeof isStudent);
+console.log("typeof emptyValue:", typeof emptyValue);
+console.log("typeof notAssigned:", typeof notAssigned);
+
+// Part 5: Demonstrating variable reassignment
+console.log("=== Variable Reassignment ===");
+console.log("Original studentName:", studentName);
+studentName = "Amira Nna";
+console.log("Updated studentName:", studentName);
+
+// Note: const variables cannot be reassigned
+
